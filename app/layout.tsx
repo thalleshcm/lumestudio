@@ -7,7 +7,7 @@ import "./globals.css"
 const blackMango = localFont({
   src: [
     {
-      path: "../public/fonts/BlackMango-Thin.woff2",
+      path: "./fonts/black-mango-thin.ttf",
       weight: "100",
       style: "normal",
     },
@@ -24,9 +24,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Auth Studio® - Bio",
-  description: "Auth Studio Bio Page",
-    generator: 'v0.dev'
+  title: "Lume Studio® - Bio",
+  description: "Lume Studio Bio Page",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

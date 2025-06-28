@@ -7,7 +7,7 @@ interface NavigationProps {
 export default function Navigation({ position }: NavigationProps) {
   const topLinks = [
     { href: "/website", label: "WEBSITE" },
-    { href: "/whatsapp", label: "WHATSAPP" },
+    { href: "https://wa.me/5531987625736?text=Ol%C3%A1!%20Vi%20o%20trabalho%20de%20voc%C3%AAs%20no%20site%20e%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20para%20um%20or%C3%A7amento", label: "WHATSAPP" },
     { href: "/registro-inpi", label: "REGISTRO INPI" },
   ]
 
