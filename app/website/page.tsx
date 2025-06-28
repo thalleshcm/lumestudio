@@ -9,7 +9,7 @@ export default function WebsitePage() {
   // Imagens do carrossel do hero
   const heroImages = [
     "/images/hero-plants.jpeg",
-    "/images/conteiner2.jpg",
+    "/images/conteiner2.JPG",
     // Adicione mais imagens se quiser
   ]
   const [currentHero, setCurrentHero] = useState(0)
@@ -51,14 +51,14 @@ export default function WebsitePage() {
         <div className="absolute inset-0 opacity-30 pointer-events-none grain-texture"></div>
 
         {/* Header */}
-        <header className="bg-transparent px-8 h-20 flex items-center justify-between relative z-20">
+        <header className="bg-transparent px-4 md:px-8 h-20 flex items-center justify-between relative z-20">
           <div className="flex items-center relative">
             <Image
               src="/images/lume-logo-hq.png"
               alt="Lume Estúdio + Agência"
               width={300}
               height={300}
-              className="w-40 h-40 filter brightness-0 invert"
+              className="w-24 h-24 md:w-40 md:h-40 filter brightness-0 invert"
               priority
             />
           </div>
@@ -95,7 +95,7 @@ export default function WebsitePage() {
         <main className="relative z-10">
           <div className="relative w-full">
             {/* Hero Image - Full Width (Carrossel) */}
-            <div className="relative h-96 md:h-[500px] lg:h-[600px] w-full transition-all duration-700 overflow-hidden">
+            <div className="relative w-full h-60 sm:h-80 md:h-[500px] lg:h-[600px] transition-all duration-700 overflow-hidden">
               <Image
                 key={heroImages[currentHero]}
                 src={heroImages[currentHero]}
