@@ -15,10 +15,10 @@ export default function WebsitePage() {
 
   // Imagens do portfólio
   const portfolioImages = [
-    "/images/hero-plants.jpeg",
-    "/images/conteiner2.JPG",
-    "/images/bglume.JPG",
-    "/images/hero-plants.jpeg",
+    "/images/Moisaico_4.jpg",
+    "/images/Moisaico_3.jpg",
+    "/images/Moisaico_2.jpg",
+    "/images/Mosaico_1.jpg",
   ]
 
   const testimonials = [
@@ -34,13 +34,14 @@ export default function WebsitePage() {
     },
     {
       quote: "A simplicidade elegante que procurávamos. O Lume Studio capturou perfeitamente nossa essência.",
-      author: "Ana Costa",
+      author: "Thalles Henrique",
       role: "Diretora, Wellness Center"
     }
   ];
 
   const [currentHero, setCurrentHero] = useState(0)
   const [fade, setFade] = useState(true)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Troca automática com fade
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function WebsitePage() {
               alt="Lume Estúdio + Agência"
               width={300}
               height={300}
-              className="w-16 h-16 md:w-24 md:h-24 lg:w-40 lg:h-40 filter brightness-0 invert"
+              className="w-24 h-24 md:w-24 md:h-24 lg:w-40 lg:h-40 filter brightness-0 invert"
               priority
             />
           </div>
@@ -117,11 +118,33 @@ export default function WebsitePage() {
             </Link>
           </nav>
           {/* Menu mobile */}
-          <button className="md:hidden relative z-10 text-[#e5e4e0]">
+          <button className="md:hidden relative z-10 text-[#e5e4e0]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M3 12h18M3 6h18M3 18h18" />
             </svg>
           </button>
+          {/* Mobile menu overlay */}
+          {mobileMenuOpen && (
+            <div className="fixed inset-0 bg-black/70 z-30 flex flex-col items-center justify-center md:hidden">
+              <nav className="space-y-8">
+                <Link href="/" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                  HOME
+                </Link>
+                <Link href="/sobre" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                  SOBRE
+                </Link>
+                <Link href="/portfolio" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                  PORTFÓLIO
+                </Link>
+                <Link href="/contato" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                  CONTATO
+                </Link>
+              </nav>
+              <button className="mt-12 text-[#e5e4e0] text-lg" onClick={() => setMobileMenuOpen(false)}>
+                Fechar
+              </button>
+            </div>
+          )}
         </header>
 
         {/* Main Content - Hero Section Full Width */}
