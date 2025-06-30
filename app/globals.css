@@ -70,6 +70,11 @@ a {
     word-spacing: 0.3em;
   }
 
+  .text-spaced-mobile {
+    letter-spacing: 0.2em;
+    word-spacing: 0.1em;
+  }
+
   .text-ultra-spaced {
     letter-spacing: 0.8em;
     word-spacing: 0.5em;

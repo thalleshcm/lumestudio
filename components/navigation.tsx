@@ -12,20 +12,20 @@ export default function Navigation({ position }: NavigationProps) {
   ]
 
   const bottomLinks = [
-    { href: "/facebook", label: "FACEBOOK" },
-    { href: "/pinterest", label: "PINTEREST" },
-    { href: "/behance", label: "BEHANCE" },
+    { href: "/sobre", label: "SOBRE" },
+    { href: "/portfolio", label: "PORTFÓLIO" },
+    { href: "/contato", label: "CONTATO" },
   ]
 
   const links = position === "top" ? topLinks : bottomLinks
 
   return (
-    <nav className="flex justify-between items-center px-8 py-6 md:px-16 md:py-8 relative z-20">
+    <nav className="flex justify-between items-center px-4 py-4 sm:px-6 md:px-8 lg:px-16 sm:py-6 md:py-8 relative z-20">
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className="text-[#e5e4e0] text-sm md:text-base font-montserrat font-thin text-spaced hover:opacity-70 hover:text-ultra-spaced transition-all duration-500 relative group"
+          className="text-[#e5e4e0] text-xs sm:text-sm md:text-base font-montserrat font-thin text-spaced-mobile sm:text-spaced hover:opacity-70 hover:text-ultra-spaced transition-all duration-500 relative group"
         >
           {link.label}
           <span className="absolute bottom-0 left-0 w-0 h-px bg-[#e5e4e0] transition-all duration-300 group-hover:w-full"></span>

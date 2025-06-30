@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import { Montserrat } from "next/font/google"
+import { StagewiseToolbar } from "@stagewise/toolbar-next"
+import { ReactPlugin } from "@stagewise-plugins/react"
 import "./globals.css"
 
 const blackMango = localFont({
@@ -36,7 +38,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${blackMango.variable} ${montserrat.variable} font-montserrat`}>{children}</body>
+      <body className={`${blackMango.variable} ${montserrat.variable} font-montserrat`}>
+        {children}
+        <StagewiseToolbar
+          config={{
+            plugins: [ReactPlugin],
+          }}
+        />
+      </body>
     </html>
   )
 }

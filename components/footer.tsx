@@ -2,7 +2,8 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { FacebookIcon, FrameIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
+import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface FooterLink {
 	title: string;
@@ -49,7 +50,13 @@ export function Footer() {
 
 			<div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
 				<AnimatedContainer className="space-y-4">
-					<FrameIcon className="size-8" />
+					<Image
+						src="/images/lume-logo-hq.png"
+						alt="Lume Studio"
+						width={120}
+						height={90}
+						className="w-16 h-16 filter brightness-0 invert"
+					/>
 					<p className="text-muted-foreground mt-8 text-sm md:mt-0">
 						© {new Date().getFullYear()} Lume Studio. Todos os direitos reservados.
 					</p>
