@@ -8,8 +8,8 @@ import { Footer } from "@/components/footer"
 export default function WebsitePage() {
   // Imagens do carrossel do hero
   const heroImages = [
-    "/images/hero-plants.jpeg",
-    "/images/conteiner2.JPG",
+    "/images/carrosel_1.jpg",
+    "/images/carrosel_2.jpg",
     // Adicione mais imagens se quiser
   ]
 
@@ -42,6 +42,27 @@ export default function WebsitePage() {
   const [currentHero, setCurrentHero] = useState(0)
   const [fade, setFade] = useState(true)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Variáveis para swipe
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      goTo("next");
+    }
+    if (touchEndX - touchStartX > 50) {
+      goTo("prev");
+    }
+  };
 
   // Troca automática com fade
   useEffect(() => {
@@ -82,14 +103,16 @@ export default function WebsitePage() {
         <header className="bg-[#19271b] px-4 md:px-8 h-16 md:h-20 flex items-center justify-between relative z-20">
           <div className="absolute inset-0 opacity-30 pointer-events-none grain-texture"></div>
           <div className="flex items-center relative z-10">
-            <Image
-              src="/images/lume-logo-hq.png"
-              alt="Lume Estúdio + Agência"
-              width={300}
-              height={300}
-              className="w-24 h-24 md:w-24 md:h-24 lg:w-40 lg:h-40 filter brightness-0 invert"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/images/lume-logo-hq.png"
+                alt="Lume Estúdio + Agência"
+                width={300}
+                height={300}
+                className="w-24 h-24 md:w-24 md:h-24 lg:w-40 lg:h-40 filter brightness-0 invert cursor-pointer"
+                priority
+              />
+            </Link>
           </div>
           <nav className="hidden md:flex space-x-4 lg:space-x-8 relative z-10">
             <Link
@@ -151,7 +174,12 @@ export default function WebsitePage() {
         <main className="relative z-10">
           <div className="relative w-full">
             {/* Hero Image - Full Width (Carrossel) */}
-            <div className="relative w-full h-48 sm:h-60 md:h-80 lg:h-[500px] xl:h-[600px] transition-all duration-700 overflow-hidden">
+            <div
+              className="relative w-full h-48 sm:h-60 md:h-80 lg:h-[500px] xl:h-[600px] transition-all duration-700 overflow-hidden"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <Image
                 key={heroImages[currentHero]}
                 src={heroImages[currentHero]}
@@ -178,20 +206,6 @@ export default function WebsitePage() {
               >
                 <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6" /></svg>
               </button>
-
-              {/* Logo overlay on image */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="max-w-[200px] sm:max-w-[250px] md:max-w-md px-4">
-                  <Image
-                    src="/images/lume-logo-hq.png"
-                    alt="Lume Estúdio + Agência"
-                    width={300}
-                    height={225}
-                    className="w-full h-auto filter brightness-0 invert drop-shadow-lg"
-                    priority
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </main>
@@ -261,6 +275,31 @@ export default function WebsitePage() {
                   e o rústico como conexão com o essencial.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Nova sessão Portifolios */}
+        <section className="py-20 px-4 md:px-8">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-center gap-8">
+            <div className="flex-1 flex items-center justify-center md:justify-start">
+              <h2 className="font-montserrat text-5xl font-light text-[#19271b] text-left mx-auto md:mx-0">
+                Portfólios
+              </h2>
+            </div>
+            <div className="flex-[2] grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link href="/portfolio">
+                <div className="aspect-[3/4] bg-cover bg-center rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" style={{backgroundImage: 'url(/images/conteinerportifolio_1.jpg)'}} />
+              </Link>
+              <Link href="/portfolio">
+                <div className="aspect-[3/4] bg-cover bg-center rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" style={{backgroundImage: 'url(/images/conteinerportifolio_2.jpg)'}} />
+              </Link>
+              <Link href="/portfolio">
+                <div className="aspect-[3/4] bg-cover bg-center rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" style={{backgroundImage: 'url(/images/conteinerportifolio_3.jpg)'}} />
+              </Link>
+              <Link href="/portfolio">
+                <div className="aspect-[3/4] bg-cover bg-center rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" style={{backgroundImage: 'url(/images/conteinerportifolio_4.jpg)'}} />
+              </Link>
             </div>
           </div>
         </section>

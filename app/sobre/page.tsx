@@ -1,6 +1,12 @@
 "use client"
 
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+
 const Sobre = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const services = [
     {
       title: 'Naming',
@@ -18,6 +24,77 @@ const Sobre = () => {
 
   return (
     <div className="bg-[#19271b] min-h-screen">
+      {/* Header */}
+      <header className="bg-[#19271b] px-4 md:px-8 h-16 md:h-20 flex items-center justify-between relative z-20">
+        <div className="absolute inset-0 opacity-30 pointer-events-none grain-texture"></div>
+        <div className="flex items-center relative z-10">
+          <Link href="/">
+            <Image
+              src="/images/lume-logo-hq.png"
+              alt="Lume Estúdio + Agência"
+              width={300}
+              height={300}
+              className="w-24 h-24 md:w-24 md:h-24 lg:w-40 lg:h-40 filter brightness-0 invert cursor-pointer"
+              priority
+            />
+          </Link>
+        </div>
+        <nav className="hidden md:flex space-x-4 lg:space-x-8 relative z-10">
+          <Link
+            href="/"
+            className="text-[#e5e4e0] text-xs lg:text-sm font-montserrat font-thin tracking-wider hover:opacity-70 transition-opacity duration-300"
+          >
+            HOME
+          </Link>
+          <Link
+            href="/sobre"
+            className="text-[#e5e4e0] text-xs lg:text-sm font-montserrat font-thin tracking-wider hover:opacity-70 transition-opacity duration-300"
+          >
+            SOBRE
+          </Link>
+          <Link
+            href="/portfolio"
+            className="text-[#e5e4e0] text-xs lg:text-sm font-montserrat font-thin tracking-wider hover:opacity-70 transition-opacity duration-300"
+          >
+            PORTFÓLIO
+          </Link>
+          <Link
+            href="/contato"
+            className="text-[#e5e4e0] text-xs lg:text-sm font-montserrat font-thin tracking-wider hover:opacity-70 transition-opacity duration-300"
+          >
+            CONTATO
+          </Link>
+        </nav>
+        {/* Menu mobile */}
+        <button className="md:hidden relative z-10 text-[#e5e4e0]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
+        {/* Mobile menu overlay */}
+        {mobileMenuOpen && (
+          <div className="fixed inset-0 bg-black/70 z-30 flex flex-col items-center justify-center md:hidden">
+            <nav className="space-y-8">
+              <Link href="/" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                HOME
+              </Link>
+              <Link href="/sobre" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                SOBRE
+              </Link>
+              <Link href="/portfolio" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                PORTFÓLIO
+              </Link>
+              <Link href="/contato" className="text-[#e5e4e0] text-2xl font-montserrat font-light block text-center" onClick={() => setMobileMenuOpen(false)}>
+                CONTATO
+              </Link>
+            </nav>
+            <button className="mt-12 text-[#e5e4e0] text-lg" onClick={() => setMobileMenuOpen(false)}>
+              Fechar
+            </button>
+          </div>
+        )}
+      </header>
+
       {/* Hero Section */}
       <section className="py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
@@ -32,38 +109,13 @@ const Sobre = () => {
 
       {/* Nossa História */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="font-montserrat text-4xl font-light text-[#e5e4e0] mb-8">
-                Nossa História
-              </h2>
-              <div className="space-y-6">
-                <p className="font-montserrat text-lg text-[#e5e4e0]/80 leading-relaxed">
-                  O Lume Studio nasceu da crença de que o design verdadeiramente 
-                  impactante não precisa ser complexo. Em um mundo saturado de 
-                  informação visual, escolhemos o caminho da simplicidade elegante.
-                </p>
-                <p className="font-montserrat text-lg text-[#e5e4e0]/80 leading-relaxed">
-                  Nossa jornada começou com uma pergunta simples: como podemos 
-                  criar marcas que sejam tanto memoráveis quanto atemporais? 
-                  A resposta estava na intersecção entre estratégia e minimalismo.
-                </p>
-                <p className="font-montserrat text-lg text-[#e5e4e0]/80 leading-relaxed">
-                  Cada projeto é uma oportunidade de descobrir a essência única 
-                  de uma marca e traduzi-la em elementos visuais que comunicam 
-                  de forma direta e autêntica.
-                </p>
-              </div>
-            </div>
-            
-            <div 
-              className="aspect-[4/5] bg-cover bg-center rounded-lg"
-              style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=600&h=750&fit=crop)',
-              }}
-            />
-          </div>
+        <div className="w-full h-[calc(100vh-5rem)] md:h-[calc(100vh-6rem)] relative">
+          <img
+            src="/images/sobremim.jpg"
+            alt="Sobre mim"
+            className="object-cover w-full h-full"
+            style={{ objectPosition: 'center' }}
+          />
         </div>
       </section>
 
