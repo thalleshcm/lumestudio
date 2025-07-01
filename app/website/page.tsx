@@ -175,7 +175,7 @@ export default function WebsitePage() {
           <div className="relative w-full">
             {/* Hero Image - Full Width (Carrossel) */}
             <div
-              className="relative w-full h-48 sm:h-60 md:h-80 lg:h-[500px] xl:h-[600px] transition-all duration-700 overflow-hidden"
+              className="relative w-full h-48 sm:h-60 md:h-80 lg:h-[500px] xl:h-[600px] transition-all duration-700 overflow-hidden bg-[#e5e4e0]"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
@@ -185,6 +185,8 @@ export default function WebsitePage() {
                 src={heroImages[currentHero]}
                 alt="Hero Carrossel"
                 fill
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlNGUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4="
                 className={`object-cover transition-opacity duration-700 ${fade ? 'opacity-0' : 'opacity-100'}`}
                 priority
               />

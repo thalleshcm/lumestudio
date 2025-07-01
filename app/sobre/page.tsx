@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Sobre = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const Sobre = () => {
   ];
 
   return (
-    <div className="bg-[#19271b] min-h-screen">
+    <div className="bg-[#19271b] min-h-screen w-full">
       {/* Header */}
       <header className="bg-[#19271b] px-4 md:px-8 h-16 md:h-20 flex items-center justify-between relative z-20">
         <div className="absolute inset-0 opacity-30 pointer-events-none grain-texture"></div>
@@ -96,7 +97,7 @@ const Sobre = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-4 lg:py-6">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="font-montserrat text-5xl lg:text-6xl font-light text-[#e5e4e0] mb-8">
             Sobre o Lume Studio
@@ -108,14 +109,26 @@ const Sobre = () => {
       </section>
 
       {/* Nossa História */}
-      <section className="py-20">
-        <div className="w-full h-[calc(100vh-5rem)] md:h-[calc(100vh-6rem)] relative">
+      <section className="py-8">
+        <div className="w-full h-[80vh] md:h-[90vh] relative p-0 m-0 flex flex-col md:flex-row items-center md:items-center gap-8">
           <img
-            src="/images/sobremim.jpg"
+            src="/images/stephanybg2.png"
             alt="Sobre mim"
-            className="object-cover w-full h-full"
+            className="object-contain object-left h-auto max-h-full max-w-xs md:max-w-sm ml-0 p-0 m-0"
             style={{ objectPosition: 'center' }}
           />
+          <motion.div
+            className="h-full flex flex-col justify-center items-center md:items-start px-6 md:px-6 md:ml-48 max-w-xl"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <h2 className="text-3xl md:text-4xl font-light text-[#e5e4e0] mb-12 font-montserrat tracking-widest text-center md:text-left">SOBRE MIM</h2>
+            <p className="text-[#e5e4e0]/90 text-base md:text-xl font-montserrat max-w-4xl text-center md:text-left">
+              Olá, me chamo Stephany, o Lume Studio surgiu na minha vida de uma forma inesperada, sempre gostei de design, embora nunca tenha imaginado seguir esse sonho, o incentivo de pessoas queridas que admiravam meus projetos me fez continuar, hoje estou realizando esse desejo com muita alegria!<br /><br />Seja bem-vindo(a)! espero que goste dos meus trabalhos!
+            </p>
+          </motion.div>
         </div>
       </section>
 

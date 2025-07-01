@@ -67,14 +67,16 @@ const Portfolio = () => {
       </header>
 
       {/* Nova sessão com imagem do portfólio atualizado */}
-      <section className="py-20 px-4 md:px-8 flex justify-center">
-        <img 
-          src="/images/Portifolio_atualizado.jpg" 
-          alt="Portfólio atualizado" 
-          className="rounded-lg max-w-full h-auto shadow-lg"
-        />
+      <section className="py-20 px-4 md:px-8 flex flex-col items-center justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#222] mb-12 font-montserrat tracking-wide">Nossos Clientes</h2>
+        <div className="flex flex-wrap justify-center items-center gap-12 mx-auto">
+          <img src="/images/logoleticia.png" alt="Logo Letícia" className="h-56 w-auto" />
+          <img src="/images/logomarlon.png" alt="Logo Marlon" className="h-56 w-auto" />
+          <img src="/images/logomilena.png" alt="Logo Milena" className="h-56 w-auto" />
+          <img src="/images/logostephany.png" alt="Logo Stephany" className="h-56 w-auto" />
+          <img src="/images/logovictor.png" alt="Logo Victor" className="h-56 w-auto" />
+        </div>
       </section>
-
       <Footer />
     </div>
   );
