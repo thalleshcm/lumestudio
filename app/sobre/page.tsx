@@ -110,7 +110,7 @@ const Sobre = () => {
 
       {/* Nossa História */}
       <section className="py-8">
-        <div className="w-full h-[80vh] md:h-[90vh] relative p-0 m-0 flex flex-col md:flex-row items-center md:items-center gap-8">
+        <div className="w-full h-[80vh] md:h-[90vh] relative p-0 m-0 flex flex-col-reverse md:flex-row items-end md:items-center gap-8">
           <img
             src="/images/stephanybg2.png"
             alt="Sobre mim"
@@ -118,14 +118,14 @@ const Sobre = () => {
             style={{ objectPosition: 'center' }}
           />
           <motion.div
-            className="h-full flex flex-col justify-center items-center md:items-start px-6 md:px-6 md:ml-48 max-w-xl"
+            className="h-full flex flex-col justify-center items-end md:items-start px-6 md:px-6 md:ml-48 max-w-xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h2 className="text-3xl md:text-4xl font-light text-[#e5e4e0] mb-12 font-montserrat tracking-widest text-center md:text-left">SOBRE MIM</h2>
-            <p className="text-[#e5e4e0]/90 text-base md:text-xl font-montserrat max-w-4xl text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-light text-[#e5e4e0] mb-12 font-montserrat tracking-widest text-right md:text-left">SOBRE MIM</h2>
+            <p className="text-[#e5e4e0]/90 text-base md:text-xl font-montserrat max-w-4xl text-right md:text-left">
               Olá, me chamo Stephany, o Lume Studio surgiu na minha vida de uma forma inesperada, sempre gostei de design, embora nunca tenha imaginado seguir esse sonho, o incentivo de pessoas queridas que admiravam meus projetos me fez continuar, hoje estou realizando esse desejo com muita alegria!<br /><br />Seja bem-vindo(a)! espero que goste dos meus trabalhos!
             </p>
           </motion.div>
