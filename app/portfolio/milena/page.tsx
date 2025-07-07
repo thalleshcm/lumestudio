@@ -49,102 +49,76 @@ const MilenaPortfolio = () => {
         )}
       </header>
 
-      {/* Breadcrumb */}
-      <div className="px-4 md:px-8 py-4">
-        <nav className="text-sm text-[#666]">
-          <Link href="/portfolio" className="hover:text-[#222] transition-colors">Portfólio</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[#222]">Milena</span>
-        </nav>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-12">
-            <img src="/images/logomilena.png" alt="Logo Milena" className="h-32 md:h-48 w-auto mx-auto mb-8" />
-            <h1 className="text-4xl md:text-6xl font-bold text-[#222] mb-6 font-montserrat tracking-wide">Milena</h1>
-            <p className="text-xl md:text-2xl text-[#666] max-w-3xl mx-auto font-montserrat">
-              Design de marca elegante e estratégia de posicionamento
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/milena/prancheta.jpg" 
+          alt="Prancheta Milena" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
+      </section>
+
+      {/* Sobre Milena */}
+      <section className="w-full h-auto min-h-[83vh] bg-[#E8E6E2] flex items-center justify-center py-12">
+        <div className="max-w-7xl w-full px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-20 text-black items-start ml-0 md:ml-8 lg:ml-12">
+          <div className="md:col-span-2 text-center md:text-left">
+            <h2 className="font-extrabold tracking-widest mb-3 text-3xl text-black">MILENA</h2>
+            <p className="mb-6 text-xl text-black">Designer | Identidade Visual</p>
+            <p className="mb-4 text-lg text-black text-justify">
+              Milena é especialista em identidade visual e design gráfico, desenvolvendo marcas autênticas e soluções criativas para empresas e profissionais.
+            </p>
+            <p className="mb-4 text-lg text-black text-justify">
+              Seu trabalho é pautado pela originalidade, atenção aos detalhes e busca constante por inovação e excelência.
+            </p>
+            <p className="mb-4 text-lg text-black text-justify">
+              <span className="font-bold">Missão:</span> criar identidades visuais que transmitam a essência e os valores de cada cliente.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Projetos */}
-      <section className="py-16 px-4 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#222] mb-16 font-montserrat tracking-wide">Projetos Realizados</h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#222] font-montserrat">Identidade Visual</h3>
-              <p className="text-[#666] leading-relaxed">
-                Criação de uma identidade visual sofisticada que transmite 
-                elegância e profissionalismo para o negócio da Milena.
-              </p>
-              <ul className="space-y-2 text-[#666]">
-                <li>• Logo principal e variações</li>
-                <li>• Paleta de cores sofisticada</li>
-                <li>• Tipografia elegante</li>
-                <li>• Diretrizes de marca</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#222] font-montserrat">Material Corporativo</h3>
-              <p className="text-[#666] leading-relaxed">
-                Desenvolvimento de materiais corporativos premium que 
-                reforçam a imagem profissional e elegante da marca.
-              </p>
-              <ul className="space-y-2 text-[#666]">
-                <li>• Cartões de visita premium</li>
-                <li>• Papelaria corporativa</li>
-                <li>• Apresentações institucionais</li>
-                <li>• Templates personalizados</li>
-              </ul>
-            </div>
+          <div className="text-center md:text-left">
+            <h2 className="font-extrabold tracking-widest mb-3 text-xl text-black">VALORES</h2>
+            <ul className="mb-6 text-lg text-black">
+              <li>Originalidade</li>
+              <li>Detalhismo</li>
+              <li>Inovação</li>
+              <li>Compromisso</li>
+            </ul>
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="font-extrabold tracking-widest mb-3 text-xl text-black">SERVIÇOS</h2>
+            <ul className="text-lg text-black">
+              <li>Identidade Visual</li>
+              <li>Design Gráfico</li>
+              <li>Consultoria Visual</li>
+              <li>Criação de Marca</li>
+              <li>Materiais Promocionais</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Resultados */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#222] mb-12 font-montserrat tracking-wide">Resultados</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-[#222] mb-2">+180%</h3>
-              <p className="text-[#666]">Aumento na percepção de qualidade</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-[#222] mb-2">+90%</h3>
-              <p className="text-[#666]">Melhoria no posicionamento</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-[#222] mb-2">100%</h3>
-              <p className="text-[#666]">Satisfação do cliente</p>
-            </div>
-          </div>
-        </div>
+      {/* Sessão Milena 1 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/milena/sessionmilena.jpg" 
+          alt="Sessão Milena 1" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
       </section>
-
-      {/* CTA */}
-      <section className="py-16 px-4 md:px-8 bg-[#19271b]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#e5e4e0] mb-6 font-montserrat tracking-wide">
-            Quer um projeto similar?
-          </h2>
-          <p className="text-xl text-[#e5e4e0] mb-8 opacity-80">
-            Vamos criar algo incrível para o seu negócio
-          </p>
-          <Link 
-            href="/contato" 
-            className="inline-block bg-[#e5e4e0] text-[#19271b] px-8 py-4 rounded-lg font-semibold hover:bg-[#d4d3cf] transition-colors duration-300"
-          >
-            Fale Conosco
-          </Link>
-        </div>
+      {/* Sessão Milena 2 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/milena/sessionmilena_2.jpg" 
+          alt="Sessão Milena 2" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
+      </section>
+      {/* Sessão Milena 3 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/milena/sessionmilena_3.jpg" 
+          alt="Sessão Milena 3" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
       </section>
 
       <Footer />

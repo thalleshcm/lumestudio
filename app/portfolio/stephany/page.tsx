@@ -49,102 +49,76 @@ const StephanyPortfolio = () => {
         )}
       </header>
 
-      {/* Breadcrumb */}
-      <div className="px-4 md:px-8 py-4">
-        <nav className="text-sm text-[#666]">
-          <Link href="/portfolio" className="hover:text-[#222] transition-colors">Portfólio</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[#222]">Stephany</span>
-        </nav>
-      </div>
-
       {/* Hero Section */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-12">
-            <img src="/images/logostephany.png" alt="Logo Stephany" className="h-32 md:h-48 w-auto mx-auto mb-8" />
-            <h1 className="text-4xl md:text-6xl font-bold text-[#222] mb-6 font-montserrat tracking-wide">Stephany</h1>
-            <p className="text-xl md:text-2xl text-[#666] max-w-3xl mx-auto font-montserrat">
-              Design de marca criativo e estratégia de comunicação
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/stephany/prancheta.jpg" 
+          alt="Prancheta Stephany" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
+      </section>
+
+      {/* Sobre Stephany */}
+      <section className="w-full h-auto min-h-[83vh] bg-[#E8E6E2] flex items-center justify-center py-12">
+        <div className="max-w-7xl w-full px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-20 text-black items-start ml-0 md:ml-8 lg:ml-12">
+          <div className="md:col-span-2 text-center md:text-left">
+            <h2 className="font-extrabold tracking-widest mb-3 text-3xl text-black">STEPHANY</h2>
+            <p className="mb-6 text-xl text-black">Designer | Branding & Digital</p>
+            <p className="mb-4 text-lg text-black text-justify">
+              Stephany é especialista em design digital e branding, criando experiências visuais marcantes e estratégias para marcas de destaque.
+            </p>
+            <p className="mb-4 text-lg text-black text-justify">
+              Seu trabalho une criatividade, sensibilidade estética e foco em resultados, sempre buscando inovação e excelência.
+            </p>
+            <p className="mb-4 text-lg text-black text-justify">
+              <span className="font-bold">Missão:</span> potencializar marcas e pessoas através do design e da comunicação visual.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Projetos */}
-      <section className="py-16 px-4 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#222] mb-16 font-montserrat tracking-wide">Projetos Realizados</h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#222] font-montserrat">Branding Criativo</h3>
-              <p className="text-[#666] leading-relaxed">
-                Desenvolvimento de uma identidade visual única e criativa que 
-                destaca a personalidade e diferenciação da marca da Stephany.
-              </p>
-              <ul className="space-y-2 text-[#666]">
-                <li>• Logo criativo e memorável</li>
-                <li>• Paleta de cores vibrante</li>
-                <li>• Tipografia personalizada</li>
-                <li>• Elementos gráficos únicos</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#222] font-montserrat">Marketing Digital</h3>
-              <p className="text-[#666] leading-relaxed">
-                Criação de estratégias de marketing digital e conteúdo visual 
-                que fortalecem a presença online e engajam o público.
-              </p>
-              <ul className="space-y-2 text-[#666]">
-                <li>• Estratégia de redes sociais</li>
-                <li>• Conteúdo visual criativo</li>
-                <li>• Campanhas digitais</li>
-                <li>• Templates personalizados</li>
-              </ul>
-            </div>
+          <div className="text-center md:text-left">
+            <h2 className="font-extrabold tracking-widest mb-3 text-xl text-black">VALORES</h2>
+            <ul className="mb-6 text-lg text-black">
+              <li>Criatividade</li>
+              <li>Inovação</li>
+              <li>Empatia</li>
+              <li>Excelência</li>
+            </ul>
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="font-extrabold tracking-widest mb-3 text-xl text-black">SERVIÇOS</h2>
+            <ul className="text-lg text-black">
+              <li>Design Digital</li>
+              <li>Branding</li>
+              <li>Identidade Visual</li>
+              <li>Consultoria Criativa</li>
+              <li>Social Media</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Resultados */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#222] mb-12 font-montserrat tracking-wide">Resultados</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-[#222] mb-2">+250%</h3>
-              <p className="text-[#666]">Crescimento no engajamento</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-[#222] mb-2">+160%</h3>
-              <p className="text-[#666]">Aumento no reconhecimento</p>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-2xl font-bold text-[#222] mb-2">100%</h3>
-              <p className="text-[#666]">Satisfação do cliente</p>
-            </div>
-          </div>
-        </div>
+      {/* Sessão Stephany 1 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/stephany/sessionstephany.jpg" 
+          alt="Sessão Stephany 1" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
       </section>
-
-      {/* CTA */}
-      <section className="py-16 px-4 md:px-8 bg-[#19271b]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#e5e4e0] mb-6 font-montserrat tracking-wide">
-            Quer um projeto similar?
-          </h2>
-          <p className="text-xl text-[#e5e4e0] mb-8 opacity-80">
-            Vamos criar algo incrível para o seu negócio
-          </p>
-          <Link 
-            href="/contato" 
-            className="inline-block bg-[#e5e4e0] text-[#19271b] px-8 py-4 rounded-lg font-semibold hover:bg-[#d4d3cf] transition-colors duration-300"
-          >
-            Fale Conosco
-          </Link>
-        </div>
+      {/* Sessão Stephany 2 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/stephany/sessionstephany_2.jpg" 
+          alt="Sessão Stephany 2" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
+      </section>
+      {/* Sessão Stephany 3 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/stephany/sessionstephany_3.jpg" 
+          alt="Sessão Stephany 3" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
       </section>
 
       <Footer />

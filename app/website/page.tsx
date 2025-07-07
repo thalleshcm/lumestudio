@@ -64,15 +64,16 @@ export default function WebsitePage() {
     }
   };
 
-  // Troca automática com fade
+  // Troca automática com fade - otimizado
   useEffect(() => {
-    const timeout = setTimeout(() => setFade(false), 3500)
+    // Delay inicial reduzido para carregamento mais rápido
+    const timeout = setTimeout(() => setFade(false), 1000)
     const interval = setInterval(() => {
       setFade(true)
       setTimeout(() => {
         setCurrentHero((prev) => (prev + 1) % heroImages.length)
         setFade(false)
-      }, 500)
+      }, 300) // Reduzido de 500ms para 300ms
     }, 4000)
     return () => {
       clearInterval(interval)
@@ -189,9 +190,11 @@ export default function WebsitePage() {
                 blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlNGUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4="
                 className={`object-cover transition-opacity duration-700 ${fade ? 'opacity-0' : 'opacity-100'}`}
                 priority
+                sizes="100vw"
+                quality={85}
               />
-              {/* Overlay for better text contrast */}
-              <div className="absolute inset-0 bg-black/20"></div>
+              {/* Overlay for better text contrast - otimizado */}
+              <div className="absolute inset-0 bg-black/20 will-change-auto"></div>
 
               {/* Botões de navegação */}
               <button
