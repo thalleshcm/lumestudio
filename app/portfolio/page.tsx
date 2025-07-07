@@ -71,7 +71,7 @@ const Portfolio = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#222] mb-12 font-montserrat tracking-wide">Nossos Clientes</h2>
         <div className="flex flex-wrap justify-center items-center gap-12 mx-auto">
           <Link href="/portfolio/leticia" className="transition-transform duration-300 hover:scale-105">
-            <img src="/images/logoleticia.png" alt="Logo Letícia" className="h-56 w-auto cursor-pointer" />
+            <img src="/images/logoleticia.png" alt="Logo Letícia" className="h-20 w-auto cursor-pointer" />
           </Link>
           <Link href="/portfolio/marlon" className="transition-transform duration-300 hover:scale-105">
             <img src="/images/logomarlon.png" alt="Logo Marlon" className="h-56 w-auto cursor-pointer" />

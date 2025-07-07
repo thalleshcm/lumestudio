@@ -52,8 +52,8 @@ const MarlonPortfolio = () => {
       {/* Hero Section */}
       <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
         <img 
-          src="/images/marlon/prancheta.jpg" 
-          alt="Prancheta Marlon" 
+          src="/images/marlon/sessaomarlon.jpg" 
+          alt="Sessão Marlon Hero" 
           className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
         />
       </section>
@@ -63,60 +63,52 @@ const MarlonPortfolio = () => {
         <div className="max-w-7xl w-full px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-20 text-black items-start ml-0 md:ml-8 lg:ml-12">
           <div className="md:col-span-2 text-center md:text-left">
             <h2 className="font-extrabold tracking-widest mb-3 text-3xl text-black">MARLON</h2>
-            <p className="mb-6 text-xl text-black">Designer | Estratégia Visual</p>
+            <p className="mb-6 text-xl text-black">CIRURGIÃO-DENTISTA | CIRURGIA ORAL MENOR</p>
             <p className="mb-4 text-lg text-black text-justify">
-              Marlon é especialista em estratégia visual e design gráfico, desenvolvendo soluções criativas e funcionais para marcas e empresas.
+            Marlon é cirurgião-dentista com atuação especializada em cirurgias orais menores, oferecendo procedimentos seguros e humanizados.
             </p>
             <p className="mb-4 text-lg text-black text-justify">
-              Seu trabalho é pautado pela inovação, atenção aos detalhes e busca constante por resultados de excelência.
+            Com técnica apurada e foco em minimizar desconfortos, conduz cada atendimento com profissionalismo e atenção aos detalhes.
             </p>
             <p className="mb-4 text-lg text-black text-justify">
-              <span className="font-bold">Missão:</span> criar estratégias visuais que impulsionem marcas e negócios.
+              <span className="font-bold">Missão:</span> promover saúde bucal e bem-estar por meio de intervenções cirúrgicas seguras e éticas.
             </p>
           </div>
           <div className="text-center md:text-left">
             <h2 className="font-extrabold tracking-widest mb-3 text-xl text-black">VALORES</h2>
             <ul className="mb-6 text-lg text-black">
-              <li>Inovação</li>
-              <li>Detalhismo</li>
-              <li>Comprometimento</li>
-              <li>Excelência</li>
+              <li>Precisão</li>
+              <li>Segurança</li>
+              <li>Responsabilidade</li>
+              <li>Discrição</li>
             </ul>
           </div>
           <div className="text-center md:text-left">
             <h2 className="font-extrabold tracking-widest mb-3 text-xl text-black">SERVIÇOS</h2>
             <ul className="text-lg text-black">
-              <li>Design Gráfico</li>
-              <li>Identidade Visual</li>
-              <li>Consultoria Visual</li>
-              <li>Criação de Marca</li>
-              <li>Materiais Promocionais</li>
+              <li>Extrações Dentárias</li>
+              <li>Cirurgia de Siso</li>
+              <li>Remoção de Cistos</li>
+              <li>Biópsias Bucais</li>
+              <li>Frenectomia</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Sessão Marlon 1 */}
-      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
-        <img 
-          src="/images/marlon/sessionmarlon.jpg" 
-          alt="Sessão Marlon 1" 
-          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
-        />
-      </section>
-      {/* Sessão Marlon 2 */}
-      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
-        <img 
-          src="/images/marlon/sessionmarlon_2.jpg" 
-          alt="Sessão Marlon 2" 
-          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
-        />
-      </section>
       {/* Sessão Marlon 3 */}
       <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
         <img 
-          src="/images/marlon/sessionmarlon_3.jpg" 
+          src="/images/marlon/sessaomarlon_3.jpg" 
           alt="Sessão Marlon 3" 
+          className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
+        />
+      </section>
+      {/* Sessão Marlon 4 */}
+      <section className="relative w-full h-[50vh] md:h-[95vh] flex items-center justify-center overflow-hidden bg-white">
+        <img 
+          src="/images/marlon/sessaomarlon_4.jpg" 
+          alt="Sessão Marlon 4" 
           className="absolute inset-0 w-full h-full object-contain md:object-fill bg-white"
         />
       </section>
